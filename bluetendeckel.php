@@ -15,7 +15,7 @@ function add_deckel() {
     $deckelfarbe = get_field('deckelfarbe');
     $geruch = get_field('geruch');
     $behandlung = get_field('behandlung');
-    $cbd_gehalt = get_field('cbd-gehalt');
+    $cbd_gehalt = get_field('cbd_gehalt');
     $anbau = get_field('anbaumethode');
 
 
