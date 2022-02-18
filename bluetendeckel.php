@@ -7,7 +7,7 @@
 
 
 
-add_action('woocommerce_single_product_summary', 'add_deckel');
+add_action('woocommerce_product_meta_end', 'add_deckel');
 
 
 function add_deckel() {
@@ -33,7 +33,7 @@ function add_deckel() {
                         </div>
                     </div>
                     <div class="popup_btn" id="btn_outdoor" onclick="openPopUp(\'btn_outdoor\', \'outdoor\')">
-                        <img class="infologo" src="http://stag2.sanaleo.com/wp-content/uploads/2021/06/outdoor-01.svg" alt="">
+                        <img class="infologo" src="https://sanaleo.com/wp-content/uploads/2021/06/outdoor-01.svg" alt="">
                         <div id="outdoor" class="info-popup">
                             <a href="http://stag2.sanaleo.com/cbd-was-ist-das-uberhaupt/#Outdoor" title="Black Domina Outdoor Grow">Outdoor-Grow</a>
                         </div>
