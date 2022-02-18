@@ -18,9 +18,9 @@ function add_deckel() {
     $cbd_gehalt = get_field('cbd_gehalt');
     $anbau = get_field('anbaumethode');
 
-    $anbau_icon_path = plugin_dir_url( __FILE__ ) .'/icons/Icon_' . $anbau . '.svg' ;
-    $geruch_icon_path = plugin_dir_url( __FILE__ ) .'/icons/Icon_Geruch';
-    $behandlung_icon_path = plugin_dir_url( __FILE__ ) .'/icons/Icon_' . $behandlung . '.svg';
+    $anbau_icon_path = plugin_dir_url( __FILE__ ) .'icons/Icon_' . $anbau . '.svg' ;
+    $geruch_icon_path = plugin_dir_url( __FILE__ ) .'icons/Icon_Geruch';
+    $behandlung_icon_path = plugin_dir_url( __FILE__ ) .'icons/Icon_' . $behandlung . '.svg';
 
 
     echo 'Deckelfarbe: ' . $deckelfarbe . '\n';
