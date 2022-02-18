@@ -16,8 +16,14 @@ function add_deckel() {
     $geruch = get_field('geruch');
     $behandlung = get_field('behandlung');
     $cbd_gehalt = get_field('cbd-gehalt');
-    $deckelfarbe = get_field('deckelfarbe');
+    $anbau = get_field('anbaumethode');
 
+
+    echo 'Deckelfarbe: ' . $deckelfarbe;
+    echo 'Behandlung: ' . $behandlung;
+    echo 'CBD Gehalt: ' . $cbd_gehalt;
+    echo 'Geruch: ' . $geruch;
+    echo 'Anbaumethode: ' . $anbau;
 
     echo '
     <div id="outer-circle">
