@@ -7,7 +7,7 @@
 
 
 
-add_action('woocommerce_before_add_to_cart_form', 'add_deckel');
+add_action('woocommerce_short_description', 'add_deckel');
 
 
 function add_deckel() {
