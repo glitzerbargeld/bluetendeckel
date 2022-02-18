@@ -19,9 +19,9 @@ function add_deckel() {
     $anbau = get_field('anbaumethode');
 
     $anbau_icon_path = plugin_dir_url( __FILE__ ) .'icons/Icon_' . $anbau . '.svg' ;
-    $geruch_icon_path = plugin_dir_url( __FILE__ ) .'icons/Icon_Geruch';
+    $geruch_icon_path = plugin_dir_url( __FILE__ ) .'icons/Icon_Geruch.svg';
     $behandlung_icon_path = plugin_dir_url( __FILE__ ) .'icons/Icon_' . $behandlung . '.svg';
-    $cbd_gehalt_icon_path = plugin_dir_url( __FILE__ ) .'icons/Icon_CBD_Gehalt';
+    $cbd_gehalt_icon_path = plugin_dir_url( __FILE__ ) .'icons/Icon_CBD_Gehalt.svg';
 
     if($behandlung = "THC-reduziert") {
     $behandlung_string = 'Diese Sorte ist THC reduziert.';
