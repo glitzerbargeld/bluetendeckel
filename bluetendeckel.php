@@ -18,12 +18,17 @@ function add_deckel() {
     $cbd_gehalt = get_field('cbd_gehalt');
     $anbau = get_field('anbaumethode');
 
+    $anbau_icon_path = plugin_dir_url( __FILE__ ) .'/icons/Icon_' . $anbau . '.svg' ;
+    $geruch_icon_path = plugin_dir_url( __FILE__ ) .'/icons/Icon_Geruch';
+    $behandlung_icon_path = plugin_dir_url( __FILE__ ) .'/icons/Icon_' . $behandlung . '.svg';
 
-    echo 'Deckelfarbe: ' . $deckelfarbe;
-    echo 'Behandlung: ' . $behandlung;
-    echo 'CBD Gehalt: ' . $cbd_gehalt;
-    echo 'Geruch: ' . $geruch;
-    echo 'Anbaumethode: ' . $anbau;
+
+    echo 'Deckelfarbe: ' . $deckelfarbe . '\n';
+    echo 'Behandlung: ' . $behandlung . '\n';
+    echo 'CBD Gehalt: ' . $cbd_gehalt . '\n';
+    echo 'Geruch: ' . $geruch . '\n';
+    echo 'Anbaumethode: ' . $anbau . '\n';
+    echo $anbau_icon_path;
 
     echo '
     <div id="outer-circle">
@@ -35,13 +40,13 @@ function add_deckel() {
                     <div class="popup_btn" id="btn_geruch" onclick="openPopUp(\'btn_geruch\', \'geruch\')">
                         <img class="infologo" src="http://stag2.sanaleo.com/wp-content/uploads/2021/06/geruch_Zeichenfläche-1.svg" alt="">
                         <div id="geruch" class="info-popup">
-                            <p>Erdig/Harzig</p>
+                            <p>' . $geruch . '</p>
                         </div>
                     </div>
-                    <div class="popup_btn" id="btn_outdoor" onclick="openPopUp(\'btn_outdoor\', \'outdoor\')">
-                        <img class="infologo" src="https://sanaleo.com/wp-content/uploads/2021/06/outdoor-01.svg" alt="">
-                        <div id="outdoor" class="info-popup">
-                            <a href="http://stag2.sanaleo.com/cbd-was-ist-das-uberhaupt/#Outdoor" title="Black Domina Outdoor Grow">Outdoor-Grow</a>
+                    <div class="popup_btn" id="btn_' . $anbau . '" onclick="openPopUp(\'btn_' .$anbau . '\', \'outdoor\')">
+                        <img class="infologo" src="' . $anbau_icon_path .'" alt="">
+                        <div id="' . $anbau . '" class="info-popup">
+                            <a href="http://stag2.sanaleo.com/cbd-was-ist-das-uberhaupt/#' . $anbau . '" title="Black Domina Outdoor Grow">' . $anbau . '-Grow</a>
                         </div>
                     </div>
                     <div class="popup_btn" id="btn_terpene" onclick="openPopUp(\'btn_terpene\', \'terpene\')">
@@ -54,7 +59,7 @@ function add_deckel() {
                     <div class="popup_btn" id="btn_cbdgehalt" onclick="openPopUp(\'btn_cbdgehalt\', \'cbdgehalt\')">
                         <img class="infologo" src="http://stag2.sanaleo.com/wp-content/uploads/2021/04/CBD_Zeichenflaeche-1.png" alt="">
                         <div id="cbdgehalt" class="info-popup">
-                            <p>Bis zu 3,5% CBD Anteil</p>
+                            <p>Bis zu ' . $cbd_gehalt .'% CBD Anteil</p>
                         </div>
                     </div>
                 </div>
