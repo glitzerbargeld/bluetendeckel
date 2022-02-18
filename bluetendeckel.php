@@ -23,7 +23,7 @@ function add_deckel() {
     <div id="outer-circle">
 <div id="circle-shadow"></div>
     <div class="circle-background"></div>
-        <div id="inner-circle" style="color:' . $deckelfarbe . '">
+        <div id="inner-circle" style="background: ' . $deckelfarbe . '">
             <div class="circle-content">      
                 <div id="logogrid" class="grid">
                     <div class="popup_btn" id="btn_geruch" onclick="openPopUp(\'btn_geruch\', \'geruch\')">
