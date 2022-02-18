@@ -7,7 +7,7 @@
 
 
 
-add_action('woocommerce_short_description', 'add_deckel');
+add_action('woocommerce_single_product_summary', 'add_deckel');
 
 
 function add_deckel() {
