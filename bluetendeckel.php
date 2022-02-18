@@ -7,7 +7,7 @@
 
 
 
-add_action('woocommerce_product_meta_end', 'add_deckel');
+add_action('woocommerce_after_single_variation', 'add_deckel');
 
 
 function add_deckel() {
