@@ -6,9 +6,9 @@
  */
 
 
-if(has_term('cbd-blueten', 'product_cat')) {
-    add_action('woocommerce_after_single_product_summary', 'add_deckel', 10);
-}
+
+add_action('woocommerce_after_single_product_summary', 'add_deckel');
+
 
 function add_deckel() {
 
