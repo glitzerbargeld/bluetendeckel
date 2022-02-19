@@ -33,11 +33,11 @@ function add_deckel() {
       $behandlung_string = 'Diese Sorte ist komplett naturbelassen.';
     }
 
-    echo 'Deckelfarbe: ' . $deckelfarbe . '\n';
-    echo 'Behandlung: ' . $behandlung . '\n';
-    echo 'CBD Gehalt: ' . $cbd_gehalt . '\n';
-    echo 'Geruch: ' . $geruch . '\n';
-    echo 'Anbaumethode: ' . $anbau . '\n';
+    echo 'Deckelfarbe: ' . $deckelfarbe . '<br>';
+    echo 'Behandlung: ' . $behandlung . '<br>';
+    echo 'CBD Gehalt: ' . $cbd_gehalt . '<br>';
+    echo 'Geruch: ' . $geruch . '<br>';
+    echo 'Anbaumethode: ' . $anbau . '<br>';
     echo $anbau_icon_path;
 
     echo '
