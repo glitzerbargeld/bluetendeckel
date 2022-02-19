@@ -18,19 +18,19 @@ function add_deckel() {
     $cbd_gehalt = get_field('cbd_gehalt');
     $anbau = get_field('anbaumethode');
 
-    $anbau_icon_path = plugin_dir_url( __FILE__ ) .'icons/Icon_' . $anbau . '.svg' ;
-    $geruch_icon_path = plugin_dir_url( __FILE__ ) .'icons/Icon_Geruch.svg';
+    $anbau_icon_path = plugin_dir_url( __FILE__ ) .'icons/icon_' . strtolower($anbau) . '.svg' ;
+    $geruch_icon_path = plugin_dir_url( __FILE__ ) .'icons/icon_geruch.svg';
     $behandlung_icon_path = plugin_dir_url( __FILE__ ) .'icons/icon_' . strtolower($behandlung) . '.svg';
-    $cbd_gehalt_icon_path = plugin_dir_url( __FILE__ ) .'icons/Icon_CBD_Gehalt.svg';
+    $cbd_gehalt_icon_path = plugin_dir_url( __FILE__ ) .'icons/icon_cbd_gehalt.svg';
 
     if($behandlung == "THC-reduziert") {
-    $behandlung_string == 'Diese Sorte ist THC reduziert.';
+        $behandlung_string = 'Diese Sorte ist THC reduziert.';
     }
     elseif ($behandlung == "Erhoehter-CBD-Gehalt") {
-      $behandlung_string = 'Der CBD Gehalt dieser Sorte wurde künstlich erhöht.';
+        $behandlung_string = 'Der CBD Gehalt dieser Sorte wurde künstlich erhöht.';
     }
     elseif ($behandlung == "Naturbelassen") {
-      $behandlung_string = 'Diese Sorte ist komplett naturbelassen.';
+        $behandlung_string = 'Diese Sorte ist komplett naturbelassen.';
     }
 
     echo 'Deckelfarbe: ' . $deckelfarbe . '<br>';
@@ -60,7 +60,7 @@ function add_deckel() {
                         </div>
                     </div>
                     <div class="popup_btn" id="btn_behandlung" onclick="openPopUp(\'btn_behandlung\', \'behandlung\')">
-                        <img class="infologo" src="' . $behandlung_icon_path. '" alt="">
+                        <img class="infologo" src="' . $behandlung_icon_path . '" alt="">
                         <div id="behandlung" class="info-popup">
                             ' . $behandlung_string . '
                         </div>
