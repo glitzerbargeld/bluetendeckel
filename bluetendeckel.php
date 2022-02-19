@@ -23,13 +23,13 @@ function add_deckel() {
     $behandlung_icon_path = plugin_dir_url( __FILE__ ) .'icons/icon_' . strtolower($behandlung) . '.svg';
     $cbd_gehalt_icon_path = plugin_dir_url( __FILE__ ) .'icons/Icon_CBD_Gehalt.svg';
 
-    if($behandlung = "THC-reduziert") {
-    $behandlung_string = 'Diese Sorte ist THC reduziert.';
+    if($behandlung == "THC-reduziert") {
+    $behandlung_string == 'Diese Sorte ist THC reduziert.';
     }
-    elseif ($behandlung = "Erhoehter-CBD-Gehalt") {
+    elseif ($behandlung == "Erhoehter-CBD-Gehalt") {
       $behandlung_string = 'Der CBD Gehalt dieser Sorte wurde künstlich erhöht.';
     }
-    elseif ($behandlung = "Naturbelassen") {
+    elseif ($behandlung == "Naturbelassen") {
       $behandlung_string = 'Diese Sorte ist komplett naturbelassen.';
     }
 
