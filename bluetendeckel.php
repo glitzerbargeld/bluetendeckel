@@ -53,7 +53,7 @@ function add_deckel() {
                             <p>' . $geruch . '</p>
                         </div>
                     </div>
-                    <div class="popup_btn" id="btn_' . strtolower($anbau) . '" onclick="openPopUp(\'btn_' . strtolower($anbau) . '\', \'outdoor\')">
+                    <div class="popup_btn" id="btn_' . strtolower($anbau) . '" onclick="openPopUp(\'btn_' . strtolower($anbau) . '\', \'' . strtolower($anbau) . '\')">
                         <img class="infologo" src="' . $anbau_icon_path .'" alt="">
                         <div id="' . strtolower($anbau) . '" class="info-popup">
                             <a href="http://stag2.sanaleo.com/cbd-was-ist-das-uberhaupt/#' . $anbau . '" title="Black Domina Outdoor Grow">' . $anbau . '-Grow</a>
