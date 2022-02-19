@@ -20,7 +20,7 @@ function add_deckel() {
 
     $anbau_icon_path = plugin_dir_url( __FILE__ ) .'icons/Icon_' . $anbau . '.svg' ;
     $geruch_icon_path = plugin_dir_url( __FILE__ ) .'icons/Icon_Geruch.svg';
-    $behandlung_icon_path = plugin_dir_url( __FILE__ ) .'icons/Icon_' . $behandlung . '.svg';
+    $behandlung_icon_path = plugin_dir_url( __FILE__ ) .'icons/icon_' . strtolower($behandlung) . '.svg';
     $cbd_gehalt_icon_path = plugin_dir_url( __FILE__ ) .'icons/Icon_CBD_Gehalt.svg';
 
     if($behandlung = "THC-reduziert") {
