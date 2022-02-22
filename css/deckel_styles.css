@@ -138,7 +138,7 @@
     }
 
     .grid {
-        left: 60.5px;
+        left: 60.5px !important;
         bottom: 60.5px !important;
         width: 210px;
     }
