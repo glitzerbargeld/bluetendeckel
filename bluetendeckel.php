@@ -31,14 +31,6 @@ function add_deckel() {
     }
     elseif ($behandlung == "Naturbelassen") {
         $behandlung_string = 'Diese Sorte ist komplett naturbelassen.';
-    }
-
-    echo 'Deckelfarbe: ' . $deckelfarbe . '<br>';
-    echo 'Behandlung: ' . $behandlung . '<br>';
-    echo 'CBD Gehalt: ' . $cbd_gehalt . '<br>';
-    echo 'Geruch: ' . $geruch . '<br>';
-    echo 'Anbaumethode: ' . $anbau . '<br>';
-    echo $anbau_icon_path;
 
     echo '
     <div id="outer-circle">
@@ -81,3 +73,5 @@ function add_deckel() {
     ';
 
 }
+
+?>
