@@ -5,7 +5,10 @@
  * Description: Fügt den Info-Deckel auf den Blüten Seiten ein
  */
 
-if (has_term(30, 'product_cat')){
+if (has_term( 'cbd-blueten' , 'product_cat')){
+    ?> 
+    <script>console.log("check")</script>
+    <?php
 add_action('woocommerce_after_single_variation', 'add_deckel');
 add_action( 'wp_enqueue_scripts', 'bd_add_scripts' );
 }
