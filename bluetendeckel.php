@@ -72,6 +72,4 @@ function add_deckel() {
     
     ';
 
-};
-
-?>
+}
