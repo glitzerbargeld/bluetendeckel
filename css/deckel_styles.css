@@ -145,7 +145,7 @@
 
     .grid-transform {
         left: 54.5px;
-        bottom: 50px;
+        bottom: 50px !important;
         width: 210px;
     }
 
