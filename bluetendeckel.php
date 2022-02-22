@@ -31,6 +31,7 @@ function add_deckel() {
     }
     elseif ($behandlung == "Naturbelassen") {
         $behandlung_string = 'Diese Sorte ist komplett naturbelassen.';
+    }
 
     echo '
     <div id="outer-circle">
@@ -72,4 +73,4 @@ function add_deckel() {
     
     ';
 
-}
+} ?>
