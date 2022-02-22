@@ -78,8 +78,8 @@
 
 .grid {
     position: absolute;
-    left: 45px;
-    bottom: 10px;
+    left: 46px !important;
+    bottom: 50px !important;
     width: 190px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(35%, 1fr));
