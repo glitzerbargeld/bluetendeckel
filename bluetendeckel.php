@@ -1,4 +1,4 @@
-<?php   
+<?php
 
 /**
  * Plugin Name: Blüten Deckel
@@ -7,17 +7,23 @@
 
 
 add_action('woocommerce_after_single_variation', 'add_deckel');
-add_action( 'wp_enqueue_scripts', 'bd_add_scripts' );
+add_action('wp_enqueue_scripts', 'bd_add_scripts');
 
 
-function bd_add_scripts() {
-    wp_register_script( 'bd_animation', plugins_url( 'js/deckel_animate.js', __FILE__ ), array( 'jquery' ), '1.0', true );
-	wp_enqueue_script( 'bd_animation' );
-	wp_enqueue_style( 'bd_styles', plugins_url( 'css/deckel_styles.css', __FILE__ ), '', '1.0' );
+function bd_add_scripts()
+{
+    if (has_term('cbd-blueten', 'product_cat')) {
+        wp_register_script('bd_animation', plugins_url('js/deckel_animate.js', __FILE__), array('jquery'), '1.0', true);
+        wp_enqueue_script('bd_animation');
+        wp_enqueue_style('bd_styles', plugins_url('css/deckel_styles.css', __FILE__), '', '1.0');
+    }
 }
 
 
-function add_deckel() {
+function add_deckel()
+{
+
+    if (has_term('cbd-blueten', 'product_cat')) {
 
     $deckelfarbe = get_field('deckelfarbe');
     $geruch = get_field('geruch');
@@ -25,18 +31,16 @@ function add_deckel() {
     $cbd_gehalt = get_field('cbd_gehalt');
     $anbau = get_field('anbaumethode');
 
-    $anbau_icon_path = plugin_dir_url( __FILE__ ) .'icons/icon_' . strtolower($anbau) . '.svg' ;
-    $geruch_icon_path = plugin_dir_url( __FILE__ ) .'icons/icon_geruch.svg';
-    $behandlung_icon_path = plugin_dir_url( __FILE__ ) .'icons/icon_' . strtolower($behandlung) . '.svg';
-    $cbd_gehalt_icon_path = plugin_dir_url( __FILE__ ) .'icons/icon_cbd_gehalt.svg';
+    $anbau_icon_path = plugin_dir_url(__FILE__) . 'icons/icon_' . strtolower($anbau) . '.svg';
+    $geruch_icon_path = plugin_dir_url(__FILE__) . 'icons/icon_geruch.svg';
+    $behandlung_icon_path = plugin_dir_url(__FILE__) . 'icons/icon_' . strtolower($behandlung) . '.svg';
+    $cbd_gehalt_icon_path = plugin_dir_url(__FILE__) . 'icons/icon_cbd_gehalt.svg';
 
-    if($behandlung == "THC-reduziert") {
+    if ($behandlung == "THC-reduziert") {
         $behandlung_string = 'Diese Sorte ist THC reduziert.';
-    }
-    elseif ($behandlung == "Erhoehter-CBD-Gehalt") {
+    } elseif ($behandlung == "Erhoehter-CBD-Gehalt") {
         $behandlung_string = 'Der CBD Gehalt dieser Sorte wurde künstlich erhöht.';
-    }
-    elseif ($behandlung == "Naturbelassen") {
+    } elseif ($behandlung == "Naturbelassen") {
         $behandlung_string = 'Diese Sorte ist komplett naturbelassen.';
     }
 
@@ -54,7 +58,7 @@ function add_deckel() {
                         </div>
                     </div>
                     <div class="popup_btn" id="btn_' . strtolower($anbau) . '" onclick="openPopUp(\'btn_' . strtolower($anbau) . '\', \'' . strtolower($anbau) . '\')">
-                        <img class="infologo" src="' . $anbau_icon_path .'" alt="">
+                        <img class="infologo" src="' . $anbau_icon_path . '" alt="">
                         <div id="' . strtolower($anbau) . '" class="info-popup">
                             <a href="http://stag2.sanaleo.com/cbd-was-ist-das-uberhaupt/#' . $anbau . '" title="Black Domina Outdoor Grow">' . $anbau . '-Grow</a>
                         </div>
@@ -69,7 +73,7 @@ function add_deckel() {
                     <div class="popup_btn" id="btn_cbdgehalt" onclick="openPopUp(\'btn_cbdgehalt\', \'cbdgehalt\')">
                         <img class="infologo" src="' . $cbd_gehalt_icon_path . '" alt="">
                         <div id="cbdgehalt" class="info-popup">
-                            <p>Bis zu ' . $cbd_gehalt .'% CBD Anteil</p>
+                            <p>Bis zu ' . $cbd_gehalt . '% CBD Anteil</p>
                         </div>
                     </div>
                 </div>
@@ -79,5 +83,5 @@ function add_deckel() {
 
     
     ';
-
+}
 }

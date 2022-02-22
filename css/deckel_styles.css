@@ -262,6 +262,7 @@
 
 
 #behandlung {
+    font-size: 22px !important;
     visibility: hidden;
     position: absolute;
 }
