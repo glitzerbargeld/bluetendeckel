@@ -72,4 +72,6 @@ function add_deckel() {
     
     ';
 
-}
+};
+
+?>
