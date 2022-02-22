@@ -87,8 +87,8 @@
 }
 
 .grid-transform {
-    bottom: 33px;
-    left: 39px;
+    bottom: 33px !important;
+    left: 39px !important;
 }
 
 .grid > div {
