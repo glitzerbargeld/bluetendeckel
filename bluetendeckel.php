@@ -30,11 +30,20 @@ function add_deckel()
     $behandlung = get_field('behandlung');
     $cbd_gehalt = get_field('cbd_gehalt');
     $anbau = get_field('anbaumethode');
+    $cbg = get_field('cbg');
 
     $anbau_icon_path = plugin_dir_url(__FILE__) . 'icons/icon_' . strtolower($anbau) . '.svg';
     $geruch_icon_path = plugin_dir_url(__FILE__) . 'icons/icon_geruch.svg';
     $behandlung_icon_path = plugin_dir_url(__FILE__) . 'icons/icon_' . strtolower($behandlung) . '.svg';
+
+    if($cbg) {
+        $cbd_gehalt_icon_path = plugin_dir_url(__FILE__) . 'icons/icon_cbg_gehalt.svg';
+        $cbd_gehalt_string = '<p>Bis zu ' . $cbd_gehalt . '% CBG Anteil</p>';
+    }
+    else {
     $cbd_gehalt_icon_path = plugin_dir_url(__FILE__) . 'icons/icon_cbd_gehalt.svg';
+    $cbd_gehalt_string = '<p>Bis zu ' . $cbd_gehalt . '% CBD Anteil</p>';
+    }
 
     if ($behandlung == "THC-reduziert") {
         $behandlung_string = 'Diese Sorte ist THC reduziert.';
@@ -72,9 +81,9 @@ function add_deckel()
 
                     <div class="popup_btn" id="btn_cbdgehalt" onclick="openPopUp(\'btn_cbdgehalt\', \'cbdgehalt\')">
                         <img class="infologo" src="' . $cbd_gehalt_icon_path . '" alt="">
-                        <div id="cbdgehalt" class="info-popup">
-                            <p>Bis zu ' . $cbd_gehalt . '% CBD Anteil</p>
-                        </div>
+                        <div id="cbdgehalt" class="info-popup">' 
+                        . $cbd_gehalt_string .
+                        '</div>
                     </div>
                 </div>
             </div> 
