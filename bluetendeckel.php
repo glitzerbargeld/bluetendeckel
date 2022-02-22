@@ -5,9 +5,16 @@
  * Description: Fügt den Info-Deckel auf den Blüten Seiten ein
  */
 
-
-
+if (has_term(30, 'product_cat')){
 add_action('woocommerce_after_single_variation', 'add_deckel');
+add_action( 'wp_enqueue_scripts', 'bd_add_scripts' );
+}
+
+function bd_add_scripts() {
+    wp_register_script( 'bd_animation', plugins_url( 'js/deckel_animate.js', __FILE__ ), array( 'jquery' ), '1.0', true );
+	wp_enqueue_script( 'bd_animation' );
+	wp_enqueue_style( 'bd_styles', plugins_url( 'css/styles.css', __FILE__ ), '', '1.0' );
+}
 
 
 function add_deckel() {
@@ -73,4 +80,4 @@ function add_deckel() {
     
     ';
 
-} ?>
+}
