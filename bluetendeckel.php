@@ -69,7 +69,7 @@ function add_deckel()
                     <div class="popup_btn" id="btn_' . strtolower($anbau) . '" onclick="openPopUp(\'btn_' . strtolower($anbau) . '\', \'' . strtolower($anbau) . '\')">
                         <img class="infologo" src="' . $anbau_icon_path . '" alt="">
                         <div id="' . strtolower($anbau) . '" class="info-popup">
-                            <a href="http://sanaleo.com/cbd-was-ist-das-uberhaupt/#' . $anbau . '" title="Black Domina Outdoor Grow">' . $anbau . '-Grow</a>
+                            <a href="https://sanaleo.com/cbd-was-ist-das-uberhaupt/#' . $anbau . '" title="Black Domina Outdoor Grow">' . $anbau . '-Grow</a>
                         </div>
                     </div>
                     <div class="popup_btn" id="btn_behandlung" onclick="openPopUp(\'btn_behandlung\', \'behandlung\')">
